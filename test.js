@@ -1,1 +1,8 @@
-console.log("hello world")
+var person = []
+
+person.name = "Mrs. White"
+
+var who = person.name
+
+console.log("Person Array", person)
+console.log(who)
