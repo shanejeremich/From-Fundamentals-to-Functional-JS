@@ -24,3 +24,7 @@ console.log(a, b)
 const [c, ...d] = [1, 2, 3]
 console.log("d", d)
 console.log(c, d)
+
+const [c, ...d] = [1, 2, 3]
+console.log("d", d)
+console.log(c, d)
