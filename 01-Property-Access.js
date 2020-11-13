@@ -1,8 +1,8 @@
-var person = {}
+var person = {};
 
-person.name = "Mrs. White"
+person.name = "Mrs. White";
 
-who = person.name
+who = person.name;
 
 // var person = {
 //   name: "Mrs. White"
@@ -10,6 +10,6 @@ who = person.name
 
 // console.log(person);
 
-console.log(person)
-console.log(who)
-console.log(who.story)
+console.log(person);
+console.log(who);
+console.log(who.story);

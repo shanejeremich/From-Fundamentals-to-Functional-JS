@@ -42,4 +42,3 @@ h = temp;
 // without temp
 // [h, g] = [g, h];
 console.log(g, h);
-1017, 889;
