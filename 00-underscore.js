@@ -1,5 +1,3 @@
-import { map } from "underscore";
-
 export const _ = {};
 
 _.each = function (list, cb) {
@@ -31,14 +29,31 @@ _.map = (list, cb) => {
   return storage;
 };
 
+// _.filter = (arr, cb) => {
+//   // create a new array
+//   const storage = [];
+//   //loop through arr
+//   for (let i = 0; i < arr.length; i++) {
+//     // check if cb returns true
+//     if (cb(arr[i], i, arr) === true) {
+//       // push into array
+//       storage.push(arr[i]);
+//     }
+//   }
+//   //return arr
+//   return storage;
+// };
+
 _.filter = (arr, cb) => {
-  // create a new array
   const storage = [];
-  //loop through arr
-  for (let i = 0; i < arr.length; i++) {
-    if (cb === true) {
-    }
-  }
-  // check if returns true, push into array
-  //return arr
+  _.each(arr, function (item, i, list) {
+    if (cb(item, i, list)) storage.push(item);
+  });
+  return storage;
 };
+
+// var evens = _.filter([1, 2, 3, 4, 5, 6], function (num) {
+//   return num % 2 == 0;
+// });
+
+// console.log(evens);
