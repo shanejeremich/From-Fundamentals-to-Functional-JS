@@ -56,13 +56,13 @@ _.from = arr => {
   return Array.prototype.slice.call(arr);
 };
 
-_.reduce(
-  [1, 2],
-  function (sum, n) {
-    return sum + n;
-  },
-  0
-);
+// _.reduce(
+//   [1, 2],
+//   function (sum, n) {
+//     return sum + n;
+//   },
+//   0
+// );
 // => 3
 
 // _.reduce(
@@ -74,3 +74,12 @@ _.reduce(
 //   {}
 // );
 // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
+
+_.reduce = (list, cb, initial) => {
+  //loop through list
+  let prev = initial;
+  for (let i = 0; i < list.length; i++) {
+    i === 0 && prev === undefined ? (prev = list[0]) : (prev = cb(list[i], prev));
+  }
+  return prev;
+};

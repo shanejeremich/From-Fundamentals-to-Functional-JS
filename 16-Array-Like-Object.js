@@ -12,4 +12,4 @@ const constructArr2 = function () {
   arr.push("the billiards room?");
   return arr.join(" ");
 };
-console.log(constructArr("was", "it", "in"));
+console.log(constructArr2("was", "it", "in"));
